@@ -1,0 +1,33 @@
+git clone ssh://git@github.com/mvekselman/<имя репозитория>.git #после создание репозитория на github создание локального репозитория
+
+
+1. git pull # синхронизация из github локального репозитория
+2. git add # добавление новых файлов в репозиторий
+3. git commit -m "комментарий" # Commit
+4. git push # загрузка всех локальных изменений
+
+
+
+Дополнительные команды:
+1. git status
+2. git log, git log -p, git log --stat
+3. git init
+4. git config --list
+5. git diff git, diff --staged
+ 
+
+Генерация SSH ключа: 
+ssh-keygen -t rsa -b 4096 -C "vekselman@gmail.com"
+
+Запуск ssh-агента:
+eval "$(ssh-agent -s)"
+Добавить ключ в ssh агент
+ssh-add ~/.ssh/id_rsa
+
+Посмотреть ключ:
+cat ~/.ssh/id_rsa.pub
+
+Проверить связь с GitHub:
+ssh -T git@github.com
+
+
